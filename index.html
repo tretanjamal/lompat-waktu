@@ -8,6 +8,14 @@
 <title>Lompat Waktu: Penjaga Nusa Lestari</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M9 39C7 22 18 9 40 8c1 22-11 33-31 31z' fill='%238FCF4E' stroke='%2316352C' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/style.css">
+<script>
+/* pengaman-ringan: tanpa klik kanan, salin, potong, tempel, dan Ctrl+U, tanpa pemberitahuan. Salinan dari tombol gim sendiri (kotak teks tersembunyi) tetap jalan. */
+(function () {
+  function cegah(e) { if (e.type === 'copy' && e.target && e.target.tagName === 'TEXTAREA') return; e.preventDefault(); }
+  ['contextmenu', 'copy', 'cut', 'paste'].forEach(function (n) { document.addEventListener(n, cegah, true); });
+  document.addEventListener('keydown', function (e) { if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 'U' || e.keyCode === 85)) e.preventDefault(); }, true);
+})();
+</script>
 </head>
 <body>
 <div id="stage">
