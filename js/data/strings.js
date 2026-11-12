@@ -32,6 +32,7 @@ window.STR = {
       title: 'Informasi',
       tabs: { goal: 'Tujuan', how: 'Cara Main', bab: 'Misi', teacher: 'Untuk Guru' },
       intro: 'Di gim ini kamu menjadi Penjaga Muda dan memakai Jam Pasir ajaib untuk melihat pulau 20 tahun lagi.',
+      tujuan: 'Tujuan pembelajaran: kamu dapat menjelaskan cara melestarikan sumber daya alam dengan melihat akibat tindakan manusia bagi alam dan warga.',
       goalHead: 'Setelah bermain, kamu bisa:',
       goals: [
         'Menyebutkan sumber daya alam dan manfaatnya.',
@@ -86,15 +87,25 @@ window.STR = {
       aiRef: ['Purwarianti, A., dkk. (2025).', 'Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru PAUD, Pendidikan Dasar, dan Pendidikan Menengah.', 'Jakarta: Pusat Kurikulum dan Pembelajaran & Pusat Standar dan Kebijakan Pendidikan.']
     },
     dev: {
-      title: 'Pengembang', photoAlt: 'Foto Jamaluddin',
-      name: 'Jamaluddin', school: 'UPTD SMPN 2 Robatal', email: 'jamaluddin551@guru.smp.belajar.id', year: 'Tahun pembuatan: 2026',
-      listHead: 'Prestasi dan Pengalaman',
-      list: [
-        'Narasumber Digitalisasi Pembelajaran Kemendikdasmen',
-        'Guru Pejuang Digital',
-        'Juara 1 Lomba Inovasi Guru SMP Kabupaten Sampang 2026',
-        'Juara 1 Guru Inspiratif SMP Kabupaten Sampang 2026',
-        'Komunitas Belajar Terbaik BLPT Kemendikdasmen 2024'
+      title: 'Pengembang', year: 'Tahun pembuatan: 2026',
+      prev: 'Pengembang sebelumnya', next: 'Pengembang berikutnya', count: '{n} dari {total}',
+      people: [
+        {
+          photo: 'pengembang.webp', photoAlt: 'Foto Jamaluddin',
+          name: 'Jamaluddin', school: 'UPTD SMPN 2 Robatal', email: 'jamaluddin551@guru.smp.belajar.id',
+          listHead: 'Prestasi dan Pengalaman',
+          list: [
+            'Narasumber Digitalisasi Pembelajaran Kemendikdasmen',
+            'Guru Pejuang Digital',
+            'Juara 1 Lomba Inovasi Guru SMP Kabupaten Sampang 2026',
+            'Juara 1 Guru Inspiratif SMP Kabupaten Sampang 2026',
+            'Komunitas Belajar Terbaik BLPT Kemendikdasmen 2024'
+          ]
+        },
+        {
+          photo: 'pengembang2.webp', photoAlt: 'Foto Ike Kartika Sari',
+          name: 'Ike Kartika Sari', school: 'Guru UPTD SDN Gunung Sekar 1'
+        }
       ]
     }
   },

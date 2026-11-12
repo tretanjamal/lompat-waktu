@@ -4,7 +4,7 @@
   function bullets(items) { return '<ul class="ab-list">' + items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>'; }
   function rows(items) { return '<div class="ab-rows">' + items.map(function (r) { return '<div class="ab-row"><b>' + r[0] + '</b><span>' + r[1] + '</span></div>'; }).join('') + '</div>'; }
   function cite(c) { return '<p class="ab-cite">' + c[0] + ' <i>' + c[1] + '</i> ' + c[2] + '</p>'; }
-  function goalHTML() { return '<p class="ab-lead">' + A.info.intro + '</p><h3>' + A.info.goalHead + '</h3>' + bullets(A.info.goals) + '<p class="ab-note">' + A.info.meta + '</p>'; }
+  function goalHTML() { return '<p class="ab-lead">' + A.info.intro + '</p><p class="ab-tujuan">' + A.info.tujuan + '</p><h3>' + A.info.goalHead + '</h3>' + bullets(A.info.goals) + '<p class="ab-note">' + A.info.meta + '</p>'; }
   function howHTML() { return '<ol class="ab-steps">' + A.info.steps.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ol><p class="ab-note">' + A.info.howNote + '</p>'; }
   function babHTML() { return rows([0, 1, 2, 3, 4, 5].map(function (n) { return [U.fmt(STR.babLabel, { n: n + 1, nama: STR.bab[n].nama }), A.info.bab[n]]; })); }
   function sourceHTML() { return '<p class="ab-lead">' + A.ref.sourceIntro + '</p>' + A.ref.sources.map(cite).join('') + '<p class="ab-note">' + A.ref.topic + '</p>'; }
@@ -31,11 +31,27 @@
       ]);
     },
     ref: function () { return open(A.ref.title, [{ id: 'source', label: A.ref.tabs.source, html: sourceHTML }, { id: 'ai', label: A.ref.tabs.ai, html: aiHTML }]); },
+    /* Pengembang: satu kartu per orang, pindah dengan tombol panah kiri/kanan (berputar) */
     dev: function () {
-      var d = A.dev;
-      return open(d.title, null, '<div class="ab-dev"><img class="ab-photo" src="assets/img/pengembang.webp" alt="' + d.photoAlt + '" draggable="false">' +
-        '<div><div class="ab-name">' + d.name + '</div><div class="ab-school">' + d.school + '</div><div class="ab-contact">' + d.email + '</div><div class="ab-contact">' + d.year + '</div>' +
-        '<h3>' + d.listHead + '</h3>' + bullets(d.list) + '</div></div>');
+      var d = A.dev, n = d.people.length, i = 0;
+      var o = open(d.title, null, '<div class="ab-carousel"><div class="ab-dev"></div><div class="ab-nav"><span class="ab-count" aria-live="polite"></span></div></div>');
+      var car = o.body.querySelector('.ab-carousel'), kartu = car.querySelector('.ab-dev'), nav = car.querySelector('.ab-nav'), hitung = nav.querySelector('.ab-count');
+      function show() {
+        var p = d.people[i];
+        kartu.innerHTML = '<img class="ab-photo" src="assets/img/' + p.photo + '" alt="' + p.photoAlt + '" draggable="false">' +
+          '<div><div class="ab-name">' + p.name + '</div><div class="ab-school">' + p.school + '</div>' +
+          (p.email ? '<div class="ab-contact">' + p.email + '</div>' : '') + '<div class="ab-contact">' + d.year + '</div>' +
+          (p.list ? '<h3>' + p.listHead + '</h3>' + bullets(p.list) : '') + '</div>';
+        kartu.classList.remove('ganti'); void kartu.offsetWidth; kartu.classList.add('ganti');
+        hitung.textContent = U.fmt(d.count, { n: i + 1, total: n });
+      }
+      function geser(arah) { i = (i + arah + n) % n; show(); }
+      if (n > 1) {
+        nav.insertBefore(Input.button(UI.icon('panah', 40), 'kunyit ab-panah kiri', function () { geser(-1); }, { aria: d.prev, id: 'devPrev' }), hitung);
+        nav.appendChild(Input.button(UI.icon('panah', 40), 'kunyit ab-panah kanan', function () { geser(1); }, { aria: d.next, id: 'devNext' }));
+      } else nav.style.display = 'none';
+      show();
+      return o;
     }
   };
 })(window);

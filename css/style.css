@@ -417,8 +417,8 @@ body.kibor .btn.tanda-bab.bergambar:focus-visible .nama { box-shadow: 0 0 0 5px 
 .ab-lead { font: 700 27px/1.2 var(--isi); }
 .ab-note { margin-top: 12px !important; padding: 8px 14px; border-radius: 14px; background: var(--kertasG); font: 400 24px/1.2 var(--isi); }
 .ab-list { list-style: none; margin: 0; padding: 0; }
-.ab-list li { position: relative; padding: 3px 0 3px 34px; font: 400 25px/1.2 var(--isi); }
-.ab-list li::before { content: ''; position: absolute; left: 4px; top: 12px; width: 15px; height: 15px; border-radius: 50%; background: var(--kunyit); border: 3px solid var(--tinta); }
+.ab-list li { position: relative; padding: 1px 0 1px 34px; font: 400 25px/1.15 var(--isi); }
+.ab-list li::before { content: ''; position: absolute; left: 4px; top: 9px; width: 15px; height: 15px; border-radius: 50%; background: var(--kunyit); border: 3px solid var(--tinta); }
 .ab-steps { list-style: none; counter-reset: s; margin: 0; padding: 0; }
 .ab-steps li { counter-increment: s; position: relative; min-height: 62px; padding: 4px 0 8px 66px; font: 700 26px/1.15 var(--isi); display: flex; align-items: center; }
 .ab-steps li::before { content: counter(s); position: absolute; left: 0; top: 2px; width: 52px; height: 52px; border-radius: 50%; background: var(--kunyit); border: 4px solid var(--tinta); font: 800 30px/48px var(--judul); text-align: center; }
@@ -426,6 +426,15 @@ body.kibor .btn.tanda-bab.bergambar:focus-visible .nama { box-shadow: 0 0 0 5px 
 .ab-row { display: grid; grid-template-columns: 206px 1fr; gap: 14px; padding: 5px 0; border-bottom: 3px dashed var(--kertasG); font: 400 23px/1.18 var(--isi); }
 .ab-row b { font: 800 24px/1.1 var(--judul); }
 .ab-cite { font: 400 24px/1.25 var(--isi); margin-top: 10px !important; }
+.ab-tujuan { margin-top: 8px !important; padding: 6px 14px; border-left: 8px solid var(--zamrud); border-radius: 10px; background: var(--kertasG); font: 700 25px/1.2 var(--isi); }
+.ab-carousel { display: flex; flex-direction: column; height: 100%; }
+.ab-carousel .ab-dev { flex: 1; min-height: 0; }
+.ab-carousel .ab-dev.ganti { animation: munculPanel 320ms cubic-bezier(.34,1.56,.64,1); }
+.ab-nav { flex: none; display: flex; align-items: center; justify-content: center; gap: 22px; padding-bottom: 6px; }
+.ab-count { min-width: 120px; text-align: center; font: 700 24px var(--isi); }
+.btn.ab-panah { position: relative; width: 72px; height: 64px; padding: 0; }
+.btn.ab-panah .ico { width: 40px; height: 40px; }
+.btn.ab-panah.kiri .ico { transform: scaleX(-1); }
 .ab-dev { display: flex; gap: 26px; align-items: flex-start; }
 .ab-photo { width: 250px; height: 300px; object-fit: cover; border: 4px solid var(--tinta); border-radius: 20px; flex: none; }
 .ab-name { font: 800 42px/1.05 var(--judul); }
