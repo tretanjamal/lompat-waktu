@@ -92,7 +92,7 @@ window.STR = {
       people: [
         {
           photo: 'pengembang.webp', photoAlt: 'Foto Jamaluddin',
-          name: 'Jamaluddin', school: 'UPTD SMPN 2 Robatal', email: 'jamaluddin551@guru.smp.belajar.id',
+          name: 'Jamaluddin', school: 'UPTD SMPN 2 Robatal', email: 'jamaluddin551@guru.smp.belajar.id', instagram: 'Instagram: @tretanjamal',
           listHead: 'Prestasi dan Pengalaman',
           list: [
             'Narasumber Digitalisasi Pembelajaran Kemendikdasmen',

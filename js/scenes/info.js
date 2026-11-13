@@ -40,7 +40,7 @@
         var p = d.people[i];
         kartu.innerHTML = '<img class="ab-photo" src="assets/img/' + p.photo + '" alt="' + p.photoAlt + '" draggable="false">' +
           '<div><div class="ab-name">' + p.name + '</div><div class="ab-school">' + p.school + '</div>' +
-          (p.email ? '<div class="ab-contact">' + p.email + '</div>' : '') + '<div class="ab-contact">' + d.year + '</div>' +
+          (p.email ? '<div class="ab-contact">' + p.email + '</div>' : '') + (p.instagram ? '<div class="ab-contact">' + p.instagram + '</div>' : '') +'<div class="ab-contact">' + d.year + '</div>' +
           (p.list ? '<h3>' + p.listHead + '</h3>' + bullets(p.list) : '') + '</div>';
         kartu.classList.remove('ganti'); void kartu.offsetWidth; kartu.classList.add('ganti');
         hitung.textContent = U.fmt(d.count, { n: i + 1, total: n });
