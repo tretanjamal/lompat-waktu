@@ -19,6 +19,7 @@ Kreator: Jamaluddin, UPTD SMPN 2 Robatal.
 - Medali lokasi peta (`lok_*`), ikon (`ikon_*`), lencana (`lencana_*`), ikon batang nilai (`meter_*`), pusaran waktu (`lompat_pusaran`), papan judul (`logo_papan`), serta sampah, awan, pulau jauh, dan burung di dunia (`js/data/model3d/spr_*.js`): ChatGPT (OpenAI), paket ChatGPT Go, dibuat kreator 4 November 2026. Prompt ada di `docs/ASET-2D.md`. Diolah oleh `tools/proses-gambar.py`: tiap lembar dipisah menjadi 6 objek, diperkecil, dan dikompres ke WebP.
 - `assets/img/pengembang.webp`: foto pengembang, dari Jamaluddin.
 - `assets/img/pengembang2.webp`: foto pengembang kedua, dari Ike Kartika Sari (dipotong dan dikompres ke WebP).
+- `assets/img/logo_instagram.webp`: logo Instagram, merek dagang Meta Platforms, Inc., dipakai hanya sebagai penanda akun pengembang. Berkas dari kreator, diperkecil ke WebP.
 
 ## Video
 - `assets/video/intro_1.mp4`, `intro_2.mp4`: Google Flow (model Veo), dibuat kreator 4 November 2026. Paket langganan belum dikonfirmasi kreator. Prompt ada di `docs/ASET-VIDEO.md`. Diolah oleh `tools/proses-video.py`: diperkecil ke 720p, dan klip 2 dipotong.

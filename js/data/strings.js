@@ -87,12 +87,12 @@ window.STR = {
       aiRef: ['Purwarianti, A., dkk. (2025).', 'Panduan Pemanfaatan Kecerdasan Artifisial untuk Guru PAUD, Pendidikan Dasar, dan Pendidikan Menengah.', 'Jakarta: Pusat Kurikulum dan Pembelajaran & Pusat Standar dan Kebijakan Pendidikan.']
     },
     dev: {
-      title: 'Pengembang', year: 'Tahun pembuatan: 2026',
+      title: 'Pengembang', year: 'Tahun pembuatan: 2026', igAlt: 'Instagram',
       prev: 'Pengembang sebelumnya', next: 'Pengembang berikutnya', count: '{n} dari {total}',
       people: [
         {
           photo: 'pengembang.webp', photoAlt: 'Foto Jamaluddin',
-          name: 'Jamaluddin', school: 'UPTD SMPN 2 Robatal', email: 'jamaluddin551@guru.smp.belajar.id', instagram: 'Instagram: @tretanjamal',
+          name: 'Jamaluddin', school: 'UPTD SMPN 2 Robatal', email: 'jamaluddin551@guru.smp.belajar.id', instagram: 'tretanjamal',
           listHead: 'Prestasi dan Pengalaman',
           list: [
             'Narasumber Digitalisasi Pembelajaran Kemendikdasmen',
